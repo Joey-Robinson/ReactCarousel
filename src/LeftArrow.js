@@ -1,7 +1,7 @@
 import React from 'react';
 
 const LeftArrow = (props) => (
-  <div className="nextArrow">
+  <div className="nextArrow" onClick={props.previousSlide}>
     &larr;
   </div>
 );

@@ -6,6 +6,6 @@ const SlideOne = (props) => {
     backgroundSize: 'cover',
     backgroundPosition: 'center'
   }
-  return <div style={background} className="Slide"></div>
+  return <div style={background} className="slide"></div>
 }
 export default SlideOne;

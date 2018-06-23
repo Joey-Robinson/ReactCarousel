@@ -1,7 +1,7 @@
 import React from 'react';
 
 const RightArrow = (props) => (
-  <div className="nextArrow">
+  <div className="nextArrow" onClick={props.nextSlide}>
     &rarr;
   </div>
 );

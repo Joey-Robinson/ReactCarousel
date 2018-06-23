@@ -11,16 +11,18 @@ class Slider extends Component {
     this.state = {
       slideCount: 1
     }
+    this.nextSlide = this.nextSlide.bind(this);
+    this.previousSlide = this.previousSlide.bind(this);
   }
-  nextSlide = () => {
-    this.setState({slideCount: this.state.slideCount + 1});
-  };
-  previousSlide = () => {
-    this.setState({slideCount: this.state.slideCount - 1});
-  }
+  // nextSlide = () => {
+  //   this.setState({slideCount: this.state.slideCount + 1});
+  // };
+  // previousSlide = () => {
+  //   this.setState({slideCount: this.state.slideCount - 1});
+  // }
   render() {
     return (
-      <div className="Slider">
+      <div className="slider">
         {this.state.slideCount === 1 ? <SlideOne /> : null}
         {this.state.slideCount === 2 ? <SlideTwo /> : null}
         {this.state.slideCount === 3 ? <SlideThree /> : null}
@@ -28,6 +30,14 @@ class Slider extends Component {
         <LeftArrow previousSlide={this.previousSlide} />
       </div>
     );
+  }
+
+    nextSlide() {
+      this.setState({ slideCount: this.state.slideCount + 1 })
+  }
+
+  previousSlide() {
+      this.setState({ slideCount: this.state.slideCount - 1 })
   }
 };
 
